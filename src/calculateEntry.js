@@ -1,5 +1,5 @@
-const en = require('faker/lib/locales/en');
 const data = require('../data/zoo_data');
+
 const { prices } = data;
 
 const countEntrants = (entrants) => (
@@ -11,7 +11,7 @@ const countEntrants = (entrants) => (
 );
 
 const calculateEntry = (entrants) => {
-  if(!entrants || entrants === 0) return 0;
+  if (!entrants || entrants === 0) return 0;
   const totalValue = countEntrants(entrants).adult * prices.adult
     + countEntrants(entrants).child * prices.child
     + countEntrants(entrants).senior * prices.senior;
